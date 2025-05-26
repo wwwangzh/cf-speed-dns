@@ -87,6 +87,7 @@ def push_plus(content):
 def main():
     # 获取最新优选IP
     ip_addresses_str = get_cf_speed_test_ip()
+    print('result: ', ip_addresses_str)
     ip_addresses = ip_addresses_str.split(',')
     dns_records = get_dns_records(CF_DNS_NAME)
     push_plus_content = []
