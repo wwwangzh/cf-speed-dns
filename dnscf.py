@@ -41,7 +41,7 @@ def get_dns_records(name):
     if response.status_code == 200:
         records = response.json()['result']
         for record in records:
-            print("DNS记录：", record['name'])
+            # print("DNS记录：", record['name'])
             if record['name'] == name:
                 def_info.append(record['id'])
         return def_info
