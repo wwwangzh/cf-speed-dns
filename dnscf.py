@@ -93,13 +93,10 @@ def main():
     print(f"get_dns_records result: {dns_records}")
     push_plus_content = []
     # # 遍历 IP 地址列表
-    # for index, ip_address in enumerate(ip_addresses):
-    #     # 执行 DNS 变更
-    #     dns = update_dns_record(dns_records[0], CF_DNS_NAME, ip_address)
-    #     push_plus_content.append(dns)
-    # 执行 DNS 变更
-    dns = update_dns_record(dns_records[0], CF_DNS_NAME, ip_address)
-    push_plus_content.append(dns)
+    for index, ip_address in enumerate(ip_addresses):
+        # 执行 DNS 变更
+        dns = update_dns_record(dns_records[0], CF_DNS_NAME, ip_address)
+        push_plus_content.append(dns)
 
     push_plus('\n'.join(push_plus_content))
 
